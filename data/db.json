@@ -1,0 +1,44 @@
+{
+    "posts":[
+        {
+            "id":1,
+            "title":"learn Angulaire",
+            "slug":"learn-angulaire",
+            "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "id":2,
+            "title":"learn Vue js ",
+            "slug":"learn-vue-js",
+            "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "id":3,
+            "title":"learn laravel 10",
+            "slug":"learn-laravel",
+            "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "id":4,
+            "title":"learn react js",
+            "slug":"learn-react-js",
+            "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "id":5,
+            "title":"learn spring boot",
+            "slug":"learn-spring",
+            "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+            "id":6,
+            "title":"learn symfony",
+            "slug":"learn-symfony",
+            "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+    
+    ],
+    "users":[
+        
+    ]
+}
