@@ -5,8 +5,14 @@
         </div>
         <div class="row">
             <div class="col-md-6" v-for="post in posts">
-                <h1><router-link :to="{name:'post-show',params:{id:post.id,slug:post.slug}}"> {{ post.title}}</router-link></h1>
-                <p class="lead">{{ post.content }}</p>
+                <h1>
+                    <router-link :to="{name:'post-show',params:{id:post.id,slug:post.slug}}"> {{ post.title}}</router-link></h1>
+                    <p class="lead">{{ post.content }}</p>
+                    <div class="my-3">
+                        <button class="btn btn-sm btn-success">Editer</button>
+                        <button class="btn btn-sm btn-info">show</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </div>
             </div>
         </div>
 </template>
