@@ -2,7 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Blog from '../views/blog/index.vue'
 import Show from '../views/blog/Show'
+import Create from '../views/blog/Create'
+import Edit from '../views/blog/Edit'
 import PageNotFound from '../views/blog/PageNotFound'
+
+
 
 const routes = [
   {
@@ -31,6 +35,18 @@ const routes = [
     props:true
   },
   {
+    path: '/new',
+    name:'New',
+    component: Create
+   
+  },
+  {
+    path: '/edit/:id',
+    name:'post-edit',
+    component: Edit,
+    props:true
+  },
+  {
     path: '/posts',
     redirect:'/blog'
   },
@@ -39,7 +55,7 @@ const routes = [
     component:PageNotFound
   
   }
-
+ 
 ]
 
 const router = createRouter({

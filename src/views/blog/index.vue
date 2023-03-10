@@ -1,35 +1,37 @@
 <template lang="">
-        <div class="container p-3 my-3 border">
-        <h1>My First Bootstrap Page</h1>
-        <p>This container has a border and some extra padding and margins.</p>
+        <div class="row">
+            <div class="col-md-12 text-right">
+            <router-link to="/new"  class="btn btn-primary">new</router-link>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-6" v-for="post in posts">
-                <h1>
-                    <router-link :to="{name:'post-show',params:{id:post.id,slug:post.slug}}"> {{ post.title}}</router-link></h1>
-                    <p class="lead">{{ post.content }}</p>
-                    <div class="my-3">
-                        <button class="btn btn-sm btn-success">Editer</button>
-                        <button class="btn btn-sm btn-info">show</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
-                    </div>
+               
+                <OnePost :post="post"  @delete="handleDelete"/>
+            
             </div>
         </div>
 </template>
 <script>
+import OnePost from './OnePost.vue'
 export default {
+    components:{OnePost},
     data(){
         return{
-           posts:[]
-
+            posts:[]
         }
     },
-    mounted(){
+   mounted(){
         fetch('http://localhost:5000/posts')
             .then(res=>res.json())
             .then(data=>this.posts=data)
             .catch(err=>console.log(err))
-    }
+    },
+    methods:{
+        handleDelete(id){
+            this.posts=this.posts.filter(post=>post.id!==id);
+        }
+    }   
     
 }
 </script>
